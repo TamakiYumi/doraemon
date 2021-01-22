@@ -1,10 +1,10 @@
 @extends('layouts.admin')
-@section('title', 'ニュース編集')
+@section('title', 'アイテム一覧')
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>ニュース編集画面</h2>
+                <h2>アイテム一覧</h2>
             </div>
         </div>
     </div>
@@ -16,9 +16,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>ニュース編集</title>
+        <title>アイテム一覧</title>
     </head>
     <body>
-        <h1>Myニュース編集画面</h1>
+        <h1>アイテム一覧</h1>
     </body>
 </html>

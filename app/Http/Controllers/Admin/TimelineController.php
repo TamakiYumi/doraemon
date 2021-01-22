@@ -5,30 +5,30 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class NewsController extends Controller
+class TimelineController extends Controller
 {
     public function index()
     {
-        return view('admin.news.index');
+        return view('admin.timeline.index');
     }
     
     public function add()
     {
-        return view('admin.news.create');
+        return view('admin.timeline.create');
     }
 
     public function create()
     {
-        return redirect('admin/news/create');
+        return redirect('admin/timeline/create');
     }
 
     public function edit()
     {
-        return view('admin.news.edit');
+        return view('admin.timeline.edit');
     }
 
     public function update()
     {
-        return redirect('admin/news/edit');
+        return redirect('admin/timeline/edit');
     }
 }
