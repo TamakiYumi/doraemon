@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Common;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -9,26 +9,26 @@ class TimelineController extends Controller
 {
     public function index()
     {
-        return view('admin.timeline.index');
+        return view('common.timeline.index');
     }
     
     public function add()
     {
-        return view('admin.timeline.create');
+        return view('common.timeline.create');
     }
 
     public function create()
     {
-        return redirect('admin/timeline/create');
+        return redirect('common/timeline/create');
     }
 
     public function edit()
     {
-        return view('admin.timeline.edit');
+        return view('common.timeline.edit');
     }
 
     public function update()
     {
-        return redirect('admin/timeline/edit');
+        return redirect('common/timeline/edit');
     }
 }
