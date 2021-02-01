@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('news/create', 'Admin\NewsController@add');
     Route::get('news/edit', 'Admin\NewsController@edit');
-    Route::get('profile', 'Admin\ProfileController@index');
+    Route::get('profile', 'Admin\ProfileController@index')->name('profile');
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::get('items/create', 'Admin\ItemsController@add');
@@ -26,12 +26,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 });
 
 Route::get('/', 'TopController@index');
-Route::get('news', 'Common\NewsController@index');
-Route::get('item', 'Common\ItemController@index');
-Route::get('items', 'Common\ItemsController@index');
-Route::get('timeline', 'Common\TimelineController@index');
-Route::get('contact', 'Common\ContactController@index');
-Route::get('about', 'Common\AboutController@index');
+Route::get('news', 'Common\NewsController@index')->name('news');
+Route::get('item/{id}', 'Common\ItemController@index')->name('item');
+Route::get('items', 'Common\ItemsController@index')->name('items');
+Route::get('timeline', 'Common\TimelineController@index')->name('timeline');
+Route::get('contact', 'Common\ContactController@index')->name('contact');
+Route::get('about', 'Common\AboutController@index')->name('about');
 
 Auth::routes();
 

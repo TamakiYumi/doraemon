@@ -39,6 +39,21 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('news') }}">ニュース</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('item',['id' => 1]) }}">アイテム1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class='nav-link' href="{{ route('timeline') }}">タイムライン</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('items') }}">アイテム一覧</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('profile') }}">プロフィール</a>
+                            </li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
