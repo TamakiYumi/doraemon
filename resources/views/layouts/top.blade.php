@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>スターターテンプレート</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-</head>
-<body style="padding-top: 60px;">
-  <main role="main" class="container">
-    <h1 class="mt-5">Bootstrapスターターテンプレート</h1>
-    <p class="lead">新しいプロジェクトをすばやく開始する方法としてこの文書を使用すること。<br>ここにあるのは、このテキストとほとんど必要最小限のHTML文書のみ。</p>
-  </main>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-  //JavaScriptプラグインの設定など
-</body>
-
+<html>
+<head><!-- 裏設定エリアの開始 -->
+    <meta charset="utf-8"><!-- 文字化け防止 -->
+    <title>@yield('title')</title>
+</head><!-- 裏設定エリアの終了 -->
+ 
+<body><!-- 画面に表示されるエリアの開始 -->
+    @yield('content')
+</body><!-- 画面に表示されるエリアの終了 -->
 </html>
