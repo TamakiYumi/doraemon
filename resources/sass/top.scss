@@ -1,105 +1,90 @@
-/*
- * 全体の設定
- */
+/* 全体的なスタイル
+-------------------------------------------------- */
+/* フッターの下の空白と明るめの本文 */
 
-/* リンク */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-/* カスタムデフォルトボタン */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* `body`からの継承を防ぐ */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-
-/*
- * ベース構造
- */
-
-html,
 body {
-  height: 100%;
-  background-color: #333;
-}
-body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
 }
 
-.cover-container {
-  max-width: 42em;
+
+/* カルーセルをカスタマイズ
+-------------------------------------------------- */
+
+/* カルーセルの基本クラス */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* 画像を配置しているので、キャプションを手助けする必要がある */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
 }
 
-/*
- * ヘッダ
- */
-
-.masthead {
-  margin-bottom: 2rem;
+/* img要素の配置のために高さを宣言 */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
 }
 
-.masthead-brand {
-  margin-bottom: 0;
+
+/* マーケティング・コンテンツ
+-------------------------------------------------- */
+
+/* カルーセルの下の3列の中のテキストを整列 */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
+
+/* フィーチャー
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* ブートストラップの&lt;hr&gt;をもっと外に出す */
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+/* マーケティングの見出しを細めにする */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
 }
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
 
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
+/* レスポンシブCSS
+-------------------------------------------------- */
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
+@media (min-width: 40em) {
+  /* カルーセルコンテンツのサイズを大きくする */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
-  .nav-masthead {
-    float: right;
+
+  .featurette-heading {
+    font-size: 50px;
   }
 }
 
-
-/*
- * カバー
- */
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
-
-
-/*
- * フッタ
- */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
 }
