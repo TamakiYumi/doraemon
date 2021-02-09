@@ -26,7 +26,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('items/edit', 'Admin\ItemsController@edit');
 });
 
-Route::get('/', 'TopController@index');
+Route::get('/', 'TopController@index')->name('top');
 Route::get('news', 'Common\NewsController@index')->name('news');
 Route::get('item/{id}', 'Common\ItemController@index')->name('item');
 Route::get('items', 'Common\ItemsController@index')->name('items');

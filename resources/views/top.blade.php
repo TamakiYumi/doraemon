@@ -12,57 +12,7 @@
     @include('parts.header')
   </header>
 
-  <!-- カルーセル
-    ================================================== -->
-  <main role="main">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- インジケータ -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect fill="#777" width="100%" height="100%"/></svg>
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <h1>見出しの例。</h1>
-              <p>カルーセルの1番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">本日登録</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect fill="#777" width="100%" height="100%"/></svg>
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>別の見出しの例。</h1>
-              <p>カルーセルの2番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">もっと学ぼう</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect fill="#777" width="100%" height="100%"/></svg>
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>もう1つ良い指標。</h1>
-              <p>カルーセルの3番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">ギャラリーを閲覧</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">前へ</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">次へ</span>
-      </a>
-    </div><!-- /.carousel -->
+  
 
     <!-- マーケティングメッセージングとフィーチャー
       ================================================== -->

@@ -9,14 +9,14 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">ドラ実</a>
+      <a class="navbar-brand" href="{{ route('top') }}">ドラ実</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{{ route('home') }}">ホーム <span class="sr-only">(現位置)</span></a>
+            <a class="nav-link" href="{{ route('home') }}">ログイン <span class="sr-only">(現位置)</span></a>
           </li>
           <li class="nav-item">
                 <a class="nav-link" href="{{ route('news') }}">ニュース</a>
