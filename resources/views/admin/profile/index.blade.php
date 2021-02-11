@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>プロフィール一覧</h2>
+                <h2>プロフィール</h2>
+                <a>これは、私のプロフィールです。</a>
             </div>
         </div>
     </div>
