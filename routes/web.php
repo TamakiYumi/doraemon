@@ -38,8 +38,4 @@ Route::get('contact', 'Common\ContactController@index')->name('contact');
 Route::get('about', 'Common\AboutController@index')->name('about');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
