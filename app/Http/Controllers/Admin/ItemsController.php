@@ -1,34 +1,36 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Items;
 
 class ItemsController extends Controller
 {
-    public function index()
-    {
-        return view('admin.items.index');
-    }
-    
-    public function add()
-    {
-        return view('admin.items.create');
-    }
-
-    public function create()
-    {
-        return redirect('admin/items/create');
-    }
-
-    public function edit()
-    {
-        return view('admin.items.edit');
-    }
-
-    public function update()
-    {
-        return redirect('admin/items/edit');
-    }
+  public function add()
+  {
+      return view('admin.items.create');
+  }
+  
+  public function create(Request $request)
+  {
+      $this->validate($request, Items::$rules);
+      
+      $news = new Item;
+      $form = $request->all();
+      
+      if (isset($form['image'])) {
+        $path = $request->file('image')->store('public/image');
+        $items->image_path = basename($path);
+      } else {
+          $items->image_path = null;
+      }
+      
+      unset($form['_token']);
+      unset($form['image']);
+      
+      $items->fill($form);
+      $items->save();
+      
+      return redirect('admin/items/create');
+  }
 }

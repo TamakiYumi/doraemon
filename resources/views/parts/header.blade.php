@@ -19,13 +19,13 @@
             <a class="nav-link" href="{{ route('home') }}">ログイン <span class="sr-only">(現位置)</span></a>
           </li>
           <li class="nav-item">
-                <a class="nav-link" href="{{ route('news') }}">ニュース</a>
-          </li>
-          <li class="nav-item">
               <a class='nav-link' href="{{ route('timeline') }}">タイムライン</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="{{ route('profile') }}">プロフィール</a>
+                <a class="nav-link" href="{{ route('news') }}">ニュース</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('profile') }}">マイページ</a>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">アイテム一覧</a>
