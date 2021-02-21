@@ -16,16 +16,17 @@
 });*/
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
-    Route::post('news/create', 'Admin\NewsController@create')->middleware('auth');
-    Route::get('news', 'Admin\NewsController@index')->middleware('auth');
-    Route::get('news/edit', 'Admin\NewsController@edit')->middleware('auth');
-    Route::post('news/edit', 'Admin\NewsController@update')->middleware('auth');
-    Route::get('news/delete', 'Admin\NewsController@delete')->middleware('auth');
+    Route::get('news/create', 'Admin\NewsController@add');
+    Route::post('news/create', 'Admin\NewsController@create');
+    Route::get('news', 'Admin\NewsController@index');
+    Route::get('news/edit', 'Admin\NewsController@edit');
+    Route::post('news/edit', 'Admin\NewsController@update');
+    Route::get('news/delete', 'Admin\NewsController@delete');
     Route::get('profile', 'Admin\ProfileController@index')->name('profile');
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::get('items/create', 'Admin\ItemsController@add');
+    Route::post('items/create', 'Admin\ItemsController@create');
     Route::get('items/edit', 'Admin\ItemsController@edit');
 });
 
@@ -37,5 +38,19 @@ Route::get('timeline', 'Common\TimelineController@index')->name('timeline');
 Route::get('contact', 'Common\ContactController@index')->name('contact');
 Route::get('about', 'Common\AboutController@index')->name('about');
 
+
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+// ログイン状態
+Route::group(['middleware' => 'auth'], function() {
+
+    // ユーザ関連
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
+
+    // フォロー/フォロー解除を追加
+    Route::post('users/{user}/follow', 'UsersController@follow')->name('follow');
+    Route::delete('users/{user}/unfollow', 'UsersController@unfollow')->name('unfollow');
+
+});

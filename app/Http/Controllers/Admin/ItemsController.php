@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Items;
+use App\Item;
 
 class ItemsController extends Controller
 {
@@ -13,9 +13,9 @@ class ItemsController extends Controller
   
   public function create(Request $request)
   {
-      $this->validate($request, Items::$rules);
+      $this->validate($request, Item::$rules);
       
-      $news = new Item;
+      $items = new Item;
       $form = $request->all();
       
       if (isset($form['image'])) {
@@ -31,6 +31,6 @@ class ItemsController extends Controller
       $items->fill($form);
       $items->save();
       
-      return redirect('admin/items/create');
+      return redirect('items');
   }
 }
