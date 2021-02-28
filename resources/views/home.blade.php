@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'ドラ実 TOP ページ')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
