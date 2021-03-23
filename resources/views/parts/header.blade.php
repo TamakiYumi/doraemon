@@ -23,13 +23,8 @@
             <li class="nav-item">
                   <a class="nav-link" href="{{ route('news') }}">ニュース</a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">アイテム一覧</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('items') }}">アイテム</a>
-                <a class="dropdown-item" href="#">リンク2</a>
-                <a class="dropdown-item" href="#">リンク3</a>
-              </div>
+            <li class="nav-item">
+                  <a class="nav-link" href="{{ route('items') }}">アイテム</a>
             </li>
           </ul>
           <!-- Right Side Of Navbar -->

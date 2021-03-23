@@ -19,7 +19,7 @@
       <div class="card-cont">
         <div class="card">
           <div class="pic">
-            <img src="img/test.jpeg" alt="">
+            <img src="{{secure_asset('images/test.jpeg')}}" class="item-image">
           </div>
           <h3>モデルハウス「obscure」オープンのお知らせ</h3>
           <span class="card-border"></span>
@@ -27,7 +27,7 @@
         </div>
         <div class="card">
           <div class="pic">
-            <img src="img/test2.jpeg" alt="">
+            <img src="{{secure_asset('images/test2.jpeg')}}" class="item-image">
           </div>
           <h3>モデルハウス「obscure」オープンのお知らせ</h3>
           <span class="card-border"></span>
@@ -35,7 +35,7 @@
         </div>
         <div class="card">
           <div class="pic">
-            <img src="img/test3.jpeg" alt="">
+            <img src="{{secure_asset('images/test3.jpeg')}}" class="item-image">
           </div>
           <h3>モデルハウス「obscure」オープンのお知らせ</h3>
           <span class="card-border"></span>

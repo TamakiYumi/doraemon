@@ -13,18 +13,18 @@
         </div>
         <div class="card-contents">
             <h2 class="text-title">アイテム</h2>
-            <div class="staff-list-area">
+            <div class="item-list-area">
                 <div class="staff-list">
-                    <img src="./staff_01.jpg" class="staff-image">
-                    <p class="staff-name">どこでもドア</p>
+                    <img src="{{secure_asset('images/items01.jpeg')}}" class="item-image">
+                    <p class="item-name">どこでもドア</p>
                 </div>
                 <div class="staff-list">
-                    <img src="./staff_02.jpg" class="staff-image">
-                    <p class="staff-name">タケコプター</p>
+                    <img src="{{secure_asset('images/items02.jpeg')}}" class="item-image">
+                    <p class="item-name">タケコプター</p>
                 </div>
                 <div class="staff-list">
-                    <img src="./staff_03.jpg" class="staff-image">
-                    <p class="staff-name">タイムマシン</p>
+                    <img src="{{secure_asset('images/items03.jpeg')}}" class="item-image">
+                    <p class="item-name">タイムマシン</p>
                 </div>
             </div>
         </div>
