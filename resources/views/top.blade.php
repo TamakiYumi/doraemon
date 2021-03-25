@@ -14,15 +14,15 @@
         <div class="card-contents">
             <h2 class="text-title">アイテム</h2>
             <div class="item-list-area">
-                <div class="staff-list">
+                <div class="items-list">
                     <img src="{{secure_asset('images/items01.jpeg')}}" class="item-image">
                     <p class="item-name">どこでもドア</p>
                 </div>
-                <div class="staff-list">
+                <div class="items-list">
                     <img src="{{secure_asset('images/items02.jpeg')}}" class="item-image">
                     <p class="item-name">タケコプター</p>
                 </div>
-                <div class="staff-list">
+                <div class="items-list">
                     <img src="{{secure_asset('images/items03.jpeg')}}" class="item-image">
                     <p class="item-name">タイムマシン</p>
                 </div>

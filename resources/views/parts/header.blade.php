@@ -10,7 +10,6 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <div class="container">
         <a class="navbar-brand" href="{{ route('top') }}">ドラ実</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
           <span class="navbar-toggler-icon"></span>
@@ -40,7 +39,7 @@
                       </li>
                   @endif
               @else
-                  <!-- 追加 -->
+
                   <li class="nav-item mr-5">
                       <a href="{{ url('tweets/create') }}" class="btn btn-md btn-primary">ツイートする</a>
                   </li>
@@ -71,6 +70,5 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
           </form>
         </div>
-      </div>
     </nav>
   </header>

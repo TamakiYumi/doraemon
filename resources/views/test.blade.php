@@ -3,7 +3,7 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/test.css') }}" rel="stylesheet">
     <title>テスト</title>
   </head>
   <body>
