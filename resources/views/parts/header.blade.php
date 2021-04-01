@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="{{ route('top') }}">ドラ実</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
           <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,9 @@
                       <a href="{{ url('tweets/create') }}" class="btn btn-md btn-primary">ツイートする</a>
                   </li>
                   <li class="nav-item">
-                      <img src="{{ asset('storage/profile_image/' .auth()->user()->profile_image) }}" class="rounded-circle" width="50" height="50">
+                    <i>
+                      <img src="{{ asset('storage/profile_image/' .auth()->user()->profile_image) }}" class="rounded-circle" id="header-icon">
+                    </i>
                   </li>
                   <li class="nav-item dropdown">
                       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -57,7 +59,6 @@
                                           document.getElementById('logout-form').submit();">
                               {{ __('Logout') }}
                           </a>
-  
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                               @csrf
                           </form>
