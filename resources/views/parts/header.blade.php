@@ -31,11 +31,11 @@
               <!-- Authentication Links -->
               @guest
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                      <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                   </li>
                   @if (Route::has('register'))
                       <li class="nav-item">
-                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                          <a class="nav-link" href="{{ route('register') }}">{{ __('会員登録') }}</a>
                       </li>
                   @endif
               @else
@@ -57,7 +57,7 @@
                           <a href="{{ route('logout') }}" class="dropdown-item"
                           onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">
-                              {{ __('Logout') }}
+                              {{ __('ログアウト') }}
                           </a>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                               @csrf
@@ -66,10 +66,6 @@
                   </li>
               @endguest
           </ul>
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="検索..." aria-label="検索...">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
-          </form>
         </div>
     </nav>
   </header>
