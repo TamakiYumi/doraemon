@@ -32,15 +32,25 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">つながる</a></li>
                         <!-- Example single danger button -->
                             <div class="btn-group">
-                              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ログイン
-                              </button>
-                              <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ url('tweets') }}">タイムライン</a>
-                                <a class="dropdown-item" href="{{ route('items') }}">アイテム作成</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('register') }}">会員登録する</a>
-                              </div>
+                                @guest
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url('login') }}">ログイン</a></li>
+                                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url('register') }}">会員登録する</a></li>
+                                @else
+                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    　ログイン中
+                                    </button>
+                                    <div class="dropdown-menu">
+                                    　<a class="dropdown-item" href="{{ url('tweets') }}">タイムライン</a>
+                                    　<a class="dropdown-item" href="{{ route('items') }}">アイテム作成</a>
+                                　  　<div class="dropdown-divider"></div>
+                                    　<a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        {{ __('ログアウト') }}
+                                    　</a>
+                                    　<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                         @csrf
+                                    　</form>
+                                    </div>
+                                @endguest
                             </div>
                     </ul>
                 </div>

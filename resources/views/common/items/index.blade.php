@@ -7,7 +7,9 @@
     @foreach($posts as $item)
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="{{ asset('storage/image/'.$item->image_path) }}" data-holder-rendered="true">
+          <div class="items-img">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="{{ asset('storage/image/'.$item->image_path) }}">
+          </div>
             <div class="card-body">
                 <h2>{{ \Str::limit($item->title, 100) }}</h2>
 　　　　        <p>{{ \Str::limit($item->body, 250) }}</p>
@@ -17,7 +19,6 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">詳細</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
                 </div>
-                
               </div>
             </div>
         </div>

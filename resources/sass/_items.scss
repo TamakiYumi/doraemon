@@ -1,0 +1,14 @@
+.items-img {
+    overflow: hidden;
+    position: relative;
+    padding-top: 65.2%;
+    img {
+        min-height: 100%;
+        height: auto;
+        min-width: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
